@@ -12,12 +12,12 @@ This bot is expected to run on Telegram using RASA api. It's development team is
 
 ## Timeline
 
-**v3.0.0 (est. 1 month)**
+**v3.0.0 (est. 1 week)** d: 23/03
 - [ ] Set up basic RASA bot
 - [ ] Set up Heroku
 - [ ] Set up CI/CD with Travis CI
 
-**v3.0.1 (est. 3 month)**
+**v3.0.1 (est. 1 week)** d: 30/03
 - [ ] Create simple dialog
 - [ ] Create commands 
   - [ ] `/about` - Message about repository and team
@@ -25,26 +25,26 @@ This bot is expected to run on Telegram using RASA api. It's development team is
   - [ ] `/contact` - Message with all numbers available
   - [ ] `/joke`- Message with a simple joke to enlighten the day 
  
-**v3.0.2 (est. 4 month)**
+**v3.0.2 (est. 2 weeks)** d: 06/04
 - [ ] Create first dialog from simulated environment
 - [ ] Create method to detect negative emotions
 - [ ] Create documentation with readthedocs 
 
-**v3.0.3 (est. 5 month)**
+**v3.0.3 (est. 3 weeks)** d: 27/04
 - [ ] Create 3 new dialogs
 - [ ] Create method to detect positive emotions
 - [ ] Set up automatic deploy on Heroku to use in other Universities
 
-**v3.0.4 (est. 5 month)**
+**v3.0.4 (est. 4 weeks)** d: 25/05
 - [ ] Create 5 more dialogs
 - [ ] Create method to recognize individual emotional level
 - [ ] Set up automatic deploy on Raspberry Pi
 
-**v3.0.5 (est. 2 month)**
+**v3.0.5 (est. 1 week)** d: 01/06
 - [ ] Battery of tests with students
 - [ ] Improve documentation 
 
-**v3.1.0 (est. 2 month)**
+**v3.1.0 (est. 2 weeks)** d: 15/06
 - [ ] Battery of tests to find possible bugs and error prone dialogs
 - [ ] Check if bot is fully-fledged 
   - [ ] Can maintain coherent dialog
