@@ -16,6 +16,7 @@ This bot is expected to run on Telegram using RASA api. It's development team is
 - [ ] Set up basic RASA bot
 - [ ] Set up Heroku
 - [ ] Set up CI/CD with Travis CI
+- [ ] Verificar possíveis instituições parceiras
 
 **v3.0.1 (est. 1 week)** d: 30/03
 - [ ] Create simple dialog
@@ -24,24 +25,29 @@ This bot is expected to run on Telegram using RASA api. It's development team is
   - [ ] `/help` - Message with emergency numbers
   - [ ] `/contact` - Message with all numbers available
   - [ ] `/joke`- Message with a simple joke to enlighten the day 
+- [ ] Contactar instituições (email, telefone, reunião, etc)
  
 **v3.0.2 (est. 2 weeks)** d: 06/04
 - [ ] Create first dialog from simulated environment
 - [ ] Create method to detect negative emotions
-- [ ] Create documentation with readthedocs 
+- [ ] Create documentation with readthedocs
+- [ ] Implementação de parceira Rabot & Instituição
 
 **v3.0.3 (est. 3 weeks)** d: 27/04
 - [ ] Create 3 new dialogs
 - [ ] Create method to detect positive emotions
 - [ ] Set up automatic deploy on Heroku to use in other Universities
+- [ ] Feedback das instituições
 
 **v3.0.4 (est. 4 weeks)** d: 25/05
 - [ ] Create 5 more dialogs
 - [ ] Create method to recognize individual emotional level
 - [ ] Set up automatic deploy on Raspberry Pi
+- [ ] Act on institution's feedback
 
 **v3.0.5 (est. 1 week)** d: 01/06
 - [ ] Battery of tests with students
+- [ ] Battery of tests with institutions
 - [ ] Improve documentation 
 
 **v3.1.0 (est. 2 weeks)** d: 15/06
