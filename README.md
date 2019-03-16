@@ -58,4 +58,7 @@ This bot is expected to run on Telegram using RASA api. It's development team is
 
 **v3.1.2** - TBD
 
+# Challenges
 
+Obstacle: Open ended conversations, multiple choices
+Possibe solution: Narrow bot's questions and emulate possible answers
