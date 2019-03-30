@@ -108,3 +108,4 @@ venv.bak/
 
 # Bot
 bot/models
+notebooks/
