@@ -18,7 +18,8 @@ def train_core(c):
 
 @task()
 def train(c):
-    c.run('train-nlu train-core')
+    train_nlu(c)
+    train_core(c)
 
 
 @task
