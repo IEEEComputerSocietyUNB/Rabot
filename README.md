@@ -8,11 +8,26 @@ This bot is expected to run on Telegram using RASA api. It's development team is
 
 ## Installing locally
 
-Train
+Download this repository and go to it's folder
 
-`docker-compose run --rm bot make train`
+```
+git clone {this repo}
+cd {this repo}
+```
 
-Run on console
+Create a virtual environment, activate it and install it's requirements
+
+```
+python3 -m venv venv
+source venv/bin/activate
+pip install -r bot.requirements.txt
+```
+
+Train the bot
+
+`docker-compose run -d --rm bot make train`
+
+Run the bot on console
 
 `docker-compose run --rm bot run-console`
 
@@ -21,7 +36,7 @@ Run on console
 ## Timeline
 
 **v3.0.0 (est. 1 week)** d: 23/03
-- [ ] Set up basic RASA bot
+- [X] Set up basic RASA bot
 - [ ] Set up Heroku
 - [ ] Set up CI/CD with Travis CI
 - [ ] Verificar possíveis instituições parceiras
