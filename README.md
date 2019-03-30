@@ -8,6 +8,14 @@ This bot is expected to run on Telegram using RASA api. It's development team is
 
 ## Installing locally
 
+Train
+
+`docker-compose run --rm bot make train`
+
+Run on console
+
+`docker-compose run --rm bot run-console`
+
 ## Setting up environment for development
 
 ## Timeline
