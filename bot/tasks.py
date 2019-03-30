@@ -4,14 +4,28 @@ import webbrowser
 from invoke import task
 
 
+@task()
+def train_nlu(c):
+    c.run(
+        'python3 -m rasa_nlu.train -c nlu_config.yml '
+        '--fixed_model_name current --data data/intents/ -o models --project nlu --verbose')
+
+
+@task()
+def train_core(c):
+    c.run('python3 train.py')
+
+
+@task()
+def train(c):
+    train_nlu(c)
+    train_core(c)
+
+
 @task
 def test(c, vv=False):
     """ NOT TESTED: Runs all tests """
-    detail = ""
-    if vv:
-        detail = '-vv'
-    c.run(f'green3 {first_test}')
-    c.run(f'green3 {app_test} {comm_test} {linter_test} {config_test} {detail}')
+    pass
 
 
 @task
@@ -37,10 +51,7 @@ def run(c):
 @task()
 def travis(c):
     """ NOT TESTED: Runs the tests checked by Travis """
-    style(c)
-    lint(c)
-    test(c)
-    cov(c)
+    pass
 
 
 @task
@@ -52,10 +63,7 @@ def install(c):
 @task
 def cov(c):
     """ NOT TESTED: Checks how much of the program is covered by tests """
-    c.run(f'coverage run -m py.test\
-          {app_test} {comm_test} {linter_test} {config_test}')
-    c.run(f'coverage report -m {app} {comm} {linter} {config}')
-    c.run(f'coverage html {app} {comm} {linter} {config}')
+    pass
 
 
 @task
