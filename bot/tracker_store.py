@@ -59,7 +59,7 @@ class ElasticTrackerStore(InMemoryTrackerStore):
 
         # Bag of words
         tags = []
-        for word in tracker.latest_message.text.replace('. ', ' ').replace(',', ' ')\
+        for word in tracker.latest_message.text.replace('. ', ' ').replace(',', ' ') \
                 .replace('"', '').replace("'", '').replace('*', '').replace('(', '').replace(')', '').split(' '):
             if word.lower() not in stopwords.words('portuguese') and len(word) > 1:
                 tags.append(word)
@@ -108,10 +108,7 @@ class ElasticTrackerStore(InMemoryTrackerStore):
         for utter in utters[::-1]:
             time_offset += 100
 
-            ts = (
-                    datetime.datetime.now() +
-                    datetime.timedelta(milliseconds=time_offset)
-            ).timestamp()
+            ts = (datetime.datetime.now() + datetime.timedelta(milliseconds=time_offset)).timestamp()
 
             timestamp = datetime.datetime.strftime(
                 datetime.datetime.fromtimestamp(ts),

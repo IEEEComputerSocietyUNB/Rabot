@@ -9,7 +9,6 @@ import traceback
 import argparse
 
 logger = logging.getLogger(__name__)
-
 parser = argparse.ArgumentParser()
 
 
@@ -114,7 +113,7 @@ class Validator:
             return True
 
     def verify_intents(self):
-        ## Adds intents in domain to the list
+        # Adds intents in domain to the list
         file = open(self.domain, 'r')
         domain_lines = file.readlines()
         file.close()
@@ -131,7 +130,7 @@ class Validator:
             elif line.strip().endswith(':'):
                 break
 
-        ## Adds intents in intent files to another list
+        # Adds intents in intent files to another list
         for intent in self.intents:
             f = open(intent, 'r')
             intent_lines = f.readlines()
@@ -139,10 +138,10 @@ class Validator:
 
             for line in intent_lines:
                 s_line = line.split(':')
-                if len(s_line) == 2 and s_line[0] == '## intent':
+                if len(s_line) == 2 and s_line[0] == '# intent':
                     intents_in_files.append(s_line[1].strip())
 
-        ## Checks if the intents in domain are the same of the ones in the intent files
+        # Checks if the intents in domain are the same of the ones in the intent files
         for intent in intents_in_domain:
             found = self.search(intents_in_files, intent)
             if not found:
