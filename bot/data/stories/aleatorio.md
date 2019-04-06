@@ -2,14 +2,6 @@
 * religiao
 - utter_religiao
 
-## path_eeesporteee
-* eeesporteee
-- utter_eeesporteee
-
-## path_time
-* time
-- utter_time
-
 ## path_linguagens
 * linguagens
 - utter_linguagens
@@ -38,13 +30,6 @@
 * como_estou
 - utter_como_estou
 
-
-
-
-## path_playlist
-* playlist
-- utter_playlist
-
 ## path_comida
 * comida
 - utter_comida
@@ -57,6 +42,7 @@
 * de_onde_voce_eh
 - utter_de_onde_voce_eh
 
+## path_relationship
 * relationship
 - utter_relationship
 
@@ -64,17 +50,9 @@
 * me
 - utter_me
 
-## path_filhos
-* filhos
-- utter_filhos
-
 ## path_filme
 * filme
 - utter_filme
-
-## path_signo
-* signo
-- utter_signo
 
 ## path_triste
 * triste

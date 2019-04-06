@@ -20,7 +20,7 @@ class RocketChatBot(OutputChannel):
         from rocketchat_py_sdk.driver import Driver
 
         self.username = user
-        self.connector = Driver(url=server , ssl=ssl)
+        self.connector = Driver(url=server, ssl=ssl)
         self.users = {}
         self.user = user
         self.password = password
@@ -40,6 +40,7 @@ class RocketChatBot(OutputChannel):
     """
     Internal callback handlers
     """
+
     def _login_callback(self, error, data):
         if error:
             logger.error('[-] callback error:')
@@ -52,6 +53,7 @@ class RocketChatBot(OutputChannel):
     """
     Messages handlers
     """
+
     def send_text_message(self, recipient_id, message):
         if recipient_id not in self.users:
             self.users[recipient_id] = RocketchatHandleMessages(recipient_id,
@@ -59,7 +61,6 @@ class RocketChatBot(OutputChannel):
 
         for message_part in message.split("\n\n"):
             self.users[recipient_id].add_message(message_part)
-
 
 
 class RocketChatInput(InputChannel):
@@ -124,6 +125,7 @@ class RocketChatInput(InputChannel):
 
         return rocketchat_webhook
 
+
 class RocketchatHandleMessages:
     def __init__(self, rid, bot):
         self.rid = rid
@@ -172,8 +174,8 @@ class RocketchatHandleMessages:
 
             words_per_sec = int(os.getenv('WORDS_PER_SECOND_TYPING', 5))
             wait_time = min(max_time,
-                max(1, n_words // words_per_sec)
-            ) + last_msg['time']
+                            max(1, n_words // words_per_sec)
+                            ) + last_msg['time']
 
         threading.Timer(wait_time, self.send_message).start()
 
@@ -187,4 +189,3 @@ class RocketchatHandleMessages:
     def deactivate_typing(self, error, data):
         if not error:
             self.is_typing = False
-
