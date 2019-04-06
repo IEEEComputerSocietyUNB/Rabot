@@ -38,11 +38,11 @@ Run the bot on console
 **v3.0.0 (est. 1 week)** d: 23/03
 - [X] Set up basic RASA bot
 - [ ] Set up Heroku
-- [ ] Set up CI/CD with Travis CI
+- [X] Set up CI/CD with Travis CI
 - [ ] Verificar possíveis instituições parceiras
 
 **v3.0.1 (est. 1 week)** d: 30/03
-- [ ] Create simple dialog
+- [X] Create simple dialog
 - [ ] Create commands 
   - [ ] `/about` - Message about repository and team
   - [ ] `/help` - Message with emergency numbers
