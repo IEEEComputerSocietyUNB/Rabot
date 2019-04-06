@@ -9,4 +9,4 @@ green
 pycodestyle
 pydocstyle
 yamllint
-gunicorn
+
