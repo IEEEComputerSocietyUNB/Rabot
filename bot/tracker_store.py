@@ -14,8 +14,10 @@ try:
     from nltk.corpus import stopwords
 except Exception as e:
     import nltk
+
     nltk.download('stopwords')
     from nltk.corpus import stopwords
+
     pass
 
 logger = logging.getLogger(__name__)
@@ -25,10 +27,12 @@ ENVIRONMENT_NAME = os.getenv('ENVIRONMENT_NAME', 'locahost')
 BOT_VERSION = os.getenv('BOT_VERSION', 'notdefined')
 HASH_GEN = hashlib.md5()
 
+
 def gen_id(timestamp):
     HASH_GEN.update(str(timestamp).encode('utf-8'))
     _id = HASH_GEN.hexdigest()[10:]
     return _id
+
 
 class ElasticTrackerStore(InMemoryTrackerStore):
     def __init__(self, domain,
@@ -53,9 +57,10 @@ class ElasticTrackerStore(InMemoryTrackerStore):
             '%Y/%m/%d %H:%M:%S'
         )
 
-        #Bag of words
+        # Bag of words
         tags = []
-        for word in tracker.latest_message.text.replace('. ',' ').replace(',',' ').replace('"','').replace("'",'').replace('*','').replace('(','').replace(')','').split(' '):
+        for word in tracker.latest_message.text.replace('. ', ' ').replace(',', ' ')\
+                .replace('"', '').replace("'", '').replace('*', '').replace('(', '').replace(')', '').split(' '):
             if word.lower() not in stopwords.words('portuguese') and len(word) > 1:
                 tags.append(word)
 
@@ -79,8 +84,8 @@ class ElasticTrackerStore(InMemoryTrackerStore):
         }
 
         self.es.index(index='messages', doc_type='message',
-                 id='{}_user_{}'.format(ENVIRONMENT_NAME, gen_id(ts)),
-                 body=json.dumps(message))
+                      id='{}_user_{}'.format(ENVIRONMENT_NAME, gen_id(ts)),
+                      body=json.dumps(message))
 
     def save_bot_message(self, tracker):
         if not tracker.latest_message.text:
@@ -99,14 +104,13 @@ class ElasticTrackerStore(InMemoryTrackerStore):
                 utters.append(evt.action_name)
             index -= 1
 
-
         time_offset = 0
         for utter in utters[::-1]:
             time_offset += 100
 
             ts = (
-                datetime.datetime.now() +
-                datetime.timedelta(milliseconds=time_offset)
+                    datetime.datetime.now() +
+                    datetime.timedelta(milliseconds=time_offset)
             ).timestamp()
 
             timestamp = datetime.datetime.strftime(
@@ -147,8 +151,8 @@ class ElasticTrackerStore(InMemoryTrackerStore):
             }
 
             self.es.index(index='messages', doc_type='message',
-                     id='{}_bot_{}'.format(ENVIRONMENT_NAME, gen_id(ts)),
-                     body=json.dumps(message))
+                          id='{}_bot_{}'.format(ENVIRONMENT_NAME, gen_id(ts)),
+                          body=json.dumps(message))
 
     def save(self, tracker):
         if ENABLE_ANALYTICS:

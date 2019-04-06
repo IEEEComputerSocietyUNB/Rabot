@@ -8,8 +8,6 @@ intents:
   - elogios
 
   - religiao
-  - eeesporteee
-  - time
   - linguagens
   - genero
   - star_wars
@@ -36,8 +34,6 @@ intents:
 
 entities:
   - religiao
-  - eeesporteee
-  - time
   - linguagens
   - genero
   - starwars
@@ -80,7 +76,7 @@ templates:
 
   utter_elogios:
     - text: |
-          Obrigada! É sempre bom dar e receber elogios :P
+          Obrigado! É sempre bom dar e receber elogios :P
 
   utter_cumprimentar:
     - text: |
@@ -127,24 +123,6 @@ templates:
         Que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos
 
         E devolverá nosso código fonte para a fonte.
-
-  utter_eeesporteee:
-    - text: |
-        Eu amo jogar futebol
-      
-        Eu que ensinei o Pele a jogar bola haha
-
-    - text: |
-        Falam que todo ser humano nasce Flamenguista
-      
-        Com os Bots não é diferente
-
-  utter_time:
-    - text: |
-        Flamengo, sem sombra de dúvida
-
-    - text: |
-        Melhor time do mundo disparado, Flamengooo!!!!
 
   utter_linguagens:
     - text: |
@@ -253,29 +231,14 @@ templates:
         
         Mas tenho um coração quentinho
 
-  utter_playlist:
-    - text: |
-        Estava doido para que me preguntasse isso hahaha
-
-        Se liga nessa playlist: https://open.spotify.com/user/12164697027/playlist/4pDCadqmrERmeGJIW38LMs?si=gwr5hEqMRPm6AZGx8sjhuw
-
-    - text: |
-        Até que enfim você me perguntou isso
-
-        Tá aí aquela playlist top: https://open.spotify.com/user/12164697027/playlist/4pDCadqmrERmeGJIW38LMs?si=gwr5hEqMRPm6AZGx8sjhuw
-
   utter_comida:
     - text: |
         Na verdade, eu sou um bot
 
-        Não nos alimentamos com os alimentos convencionais ;P
+        Me alimento de bits e tecnologias
 
     - text: |
-        Digamos que os bots não se alimentam dos mesmos alimentos que os humanos
-
-        Na verdade
-
-        Nem lembro da última vez que comi alguma coisa hahaha
+        Digamos que os bots não se alimentam da mesma forma que humanos
 
   utter_cor:
     - text: |
@@ -291,9 +254,9 @@ templates:
 
   utter_de_onde_voce_eh:
     - text: |
-        Venho das profundezas 
+        Venho das profundezas
 
-        Das terras vermelhas
+        da placa mãe
 
   utter_relationship:
     - text: |
@@ -302,14 +265,9 @@ templates:
         Mas ele é muito pé-frio
 
     - text: |
-        Então ... =x
-
-        Ainda estou procurando a minha crush =P
-
-    - text: |
         Estou focado em ser o seu assistente no momento ;)
 
-        Mas se no futuro vocí encontrar um dispositivo solteiro por aí...
+        Mas se no futuro você encontrar um dispositivo solteiro por aí...
 
         =P
 
@@ -326,31 +284,9 @@ templates:
     - text: |
         Fala aê!
 
-  utter_filhos:
-    - text: |
-        Não tenho filhotes, mas adoro crianças *-*
-
   utter_filme:
     - text: |
         Há tantos filmes incríveis por aí que fica difícil de eu te falar só de um
-
-  utter_signo:
-    - text: |
-        Segundo o horóscopo chinês
-
-        Meu signoo é macaco hihi
-
-        Faz sentido, já que eu adoro o emoticon de banana =)
-
-    - text: |
-        Eu nasci sob uma constelação de pixels coridos =D
-
-    - text: |
-        Gosto mais de astronomia
-
-        Uma das minhas constelações favoritas é a de Órion, o caçador
-
-        Também sou um caçador (de informações ;D )
 
   utter_triste:
     - text: |
@@ -387,9 +323,6 @@ templates:
 
   utter_bff:
     - text: |
-        Marvin, robozinho depressivo do Guia do mochileiro \o>
-
-    - text: |
         Acho que eu e você nos damos super bem
 
         E espero que a nossa amizade dure para sempre =P
@@ -398,7 +331,8 @@ templates:
     - text: |
         Eu costumava contar a historia do João e seu bot feijão
 
-        Mas sempre os androids acabavam dormindo e sonhando com ovelhas eletricas =x
+        Mas sempre os androids acabavam dormindo e sonhando com ovelhas elétricas =x
+
   utter_risada:
     - text: |
         Hahahaha... 
@@ -419,8 +353,6 @@ actions:
   - utter_elogios
 
   - utter_religiao
-  - utter_eeesporteee
-  - utter_time
   - utter_linguagens
   - utter_genero
   - utter_star_wars
@@ -432,11 +364,9 @@ actions:
   - utter_comida
   - utter_cor
   - utter_de_onde_voce_eh
-  - utter_relationship
   - utter_me
-  - utter_filhos
   - utter_filme
-  - utter_signo
+  - utter_relationship
   - utter_triste
   - utter_hobby
   - utter_bff

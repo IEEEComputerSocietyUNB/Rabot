@@ -107,8 +107,8 @@ class CustomFallbackPolicy(Policy):
         # to not override standard behaviour
         nlu_confidence = nlu_data["intent"].get("confidence", 1.0)
         # logger.debug("NLU_DATA [intent] = {}".format(nlu_data["intent"]))
-        #core_confidence = tracker.current_state()
-        #logger.debug("This should be core_confidence {}".format(core_confidence))
+        # core_confidence = tracker.current_state()
+        # logger.debug("This should be core_confidence {}".format(core_confidence))
 
         # if tracker.latest_action_name == self.fallback_action_name:
         #     result = [0.0] * domain.num_actions
@@ -135,14 +135,13 @@ class CustomFallbackPolicy(Policy):
                 if tracker.latest_action_name != nlu_data["intent"].get('name'):
                     if nlu_data["intent"].get('confidence') > self.core_threshold:
                         idx = domain.index_for_action("utter_{}".format(nlu_data["intent"].get('name')))
-                        result[idx] = nlu_data["intent"].get('confidence',self.nlu_threshold)
+                        result[idx] = nlu_data["intent"].get('confidence', self.nlu_threshold)
             except Exception as e:
                 pass
             # logger.debug("else result= {}".format(result))
             # result = [0.0] * domain.num_actions
             # result[idx] = FALLBACK_SCORE
             # logger.debug("FALLBACK_SCORE = {}".format(FALLBACK_SCORE))
-
 
         return result
 

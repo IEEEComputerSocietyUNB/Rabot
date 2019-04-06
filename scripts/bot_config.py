@@ -38,7 +38,8 @@ parser.add_argument(
     help='Bot password at RocketChat(default: bot)'
 )
 parser.add_argument(
-    '--bot-avatar', '-ba', type=str, default='https://raw.githubusercontent.com/lappis-unb/rouana/master/images/rouana_avatar.jpeg',
+    '--bot-avatar', '-ba', type=str,
+    default='https://raw.githubusercontent.com/lappis-unb/rouana/master/images/rouana_avatar.jpeg',
     help='Bot avatar photo link (default: bot\'s github avatar)'
 )
 parser.add_argument(
@@ -59,7 +60,6 @@ parser.add_argument(
 )
 
 args = parser.parse_args()
-
 
 host = args.rocketchat_url
 if host[-1] == '/':
@@ -84,6 +84,7 @@ admin_password = args.admin_password
 rasa_url = args.rasa_url
 user_header = None
 
+
 def api(endpoint, values=None, is_post=True):
     if endpoint[0] == '/':
         endpoint = endpoint[1:]
@@ -106,8 +107,10 @@ def api(endpoint, values=None, is_post=True):
 
     return response.json()
 
+
 def api_post(endpoint, values=None):
     return api(endpoint, values)
+
 
 def api_get(endpoint, values=None):
     return api(endpoint, values, False)
@@ -195,17 +198,17 @@ def configure_webhooks():
             return
 
     api_post('integrations.create',
-        {
-            'name': name,
-            'type': 'webhook-outgoing',
-            'enabled': True,
-            'scriptEnabled': False,
-            'event': 'sendMessage',
-            'urls': [rasa_url],
-            'username': bot['username'],
-            'channel': '@' + bot['username'],
-        }
-    )
+             {
+                 'name': name,
+                 'type': 'webhook-outgoing',
+                 'enabled': True,
+                 'scriptEnabled': False,
+                 'event': 'sendMessage',
+                 'urls': [rasa_url],
+                 'username': bot['username'],
+                 'channel': '@' + bot['username'],
+             }
+             )
 
 
 def configure_rocketchat():
@@ -245,6 +248,7 @@ def create_department(bot_agent_id):
                 'order': 0
             }]
         })
+
 
 if __name__ == '__main__':
     logger.info('===== Automatic env configuration =====')
