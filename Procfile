@@ -1,1 +1,1 @@
-web: sh -c 'cd ./bot/ && inv run'
+worker: sh -c 'cd ./bot/ && inv run'
