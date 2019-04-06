@@ -1,1 +1,1 @@
-web: sh -c 'cd ./bot/ && inv train && inv run'
+web: sh -c 'cd ./bot/ && inv run'
