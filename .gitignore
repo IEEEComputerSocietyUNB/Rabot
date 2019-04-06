@@ -109,3 +109,4 @@ venv.bak/
 # Bot
 bot/models
 notebooks/
+bot/credentials.yml

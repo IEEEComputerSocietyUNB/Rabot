@@ -32,7 +32,9 @@ class RocketChatBot(OutputChannel):
 
     def login(self):
         while not self.logged_in:
-            logger.info('Trying to login to rocketchat as {}'.format(self.user))
+            logger.info(
+                'Trying to login to rocketchat as {}'.format(self.user)
+            )
             self.connector.login(user=self.user, password=self.password,
                                  callback=self._login_callback)
             time.sleep(10)

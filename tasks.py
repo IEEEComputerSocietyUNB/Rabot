@@ -1,38 +1,17 @@
-import os
-import webbrowser
-
 from invoke import task
 
 
-@task()
-def train_nlu(c):
-    c.run(
-        'python3 -m rasa_nlu.train -c nlu_config.yml '
-        '--fixed_model_name current --data data/intents/ -o models --project nlu --verbose')
-
-
-@task()
-def train_core(c):
-    c.run('python3 train.py')
-
-
-@task()
-def train(c):
-    """ Trains the bot with dialogs on domain.yml and actions folder """
-    train_nlu(c)
-    train_core(c)
-
-
 @task
-def test(c, vv=False):
-    """ NOT TESTED: Runs all tests """
-    pass
+def travis(c):
+    """ Runs all tests on Travis CI """
+    style(c)
+    # lint(c)
 
 
 @task
 def style(c):
     """ Checks if your code is well formatted for this project """
-    c.run('pycodestyle . --ignore=E402,W504')
+    c.run('pycodestyle bot scripts --ignore=E402,E501,W504')
 
 
 @task()
@@ -56,4 +35,4 @@ def install(c):
 @task
 def lint(c):
     """ NOT TESTED: Checks yaml file structure """
-    c.run('yamllint .')
+    c.run('yamllint bot scripts')

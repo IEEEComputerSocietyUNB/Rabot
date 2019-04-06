@@ -1,0 +1,18 @@
+os: linux
+dist: trusty
+sudo: required
+language: python
+cache: pip
+python:
+  - 3.6.5
+install:
+  - pip install -r requirements.txt
+script:
+  - invoke travis
+notifications:
+  webhooks:
+    urls:
+      - https://integrations.bonbotics.io/travis/webhook/2Xp5VtTcrNNLtIMd9zfTEIIE1AJHZRsHEOgASbWe0UM
+    on_success: never
+    on_failure: always
+    on_start: never
