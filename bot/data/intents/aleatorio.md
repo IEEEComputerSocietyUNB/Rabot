@@ -16,21 +16,6 @@
 - [biblia](religiao)
 - [religiao](religiao)
 
-## intent:esporte
-- voce joga [futebol](esporte)
-- vamos falar de [futebol](esporte)
-- qual o seu [esporte](esporte) favorito?
-- voce pratica [esporte](esporte)?
-- [esporte](esporte)
-- [futebol](esporte)
-
-## intent:time
-- qual o melhor time do brasil
-- qual o seu time?
-- para qual time você torce?
-- que time vc torce?
-- quem vai ser o campeao brasileiro nesse ano
-
 ## intent:star_wars
 - [mestre yoda](starwars)
 - citação de [starwars](starwars)
@@ -149,7 +134,7 @@
 - Você tem [namorado](relationship)?
 - Você tem [namorada](relationship)?
 - Você [namora](relationship)?
-- Você é [catristeo](relationship)?
+- Você é [solteiro](relationship)?
 - Gosta de alguém?
 - [Namorar](relationship) comigo?
 - Quer [namorar](relationship)?
@@ -239,6 +224,6 @@
 - jajajajajajajaja
 - rosos
 - pala
-- chorei de ri
+- chorei de rir
 - ri
 - rachei

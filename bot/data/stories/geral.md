@@ -24,11 +24,9 @@
 * negar
     - utter_despedir
 
-
 ## elogios
 * elogios
     - utter_elogios
-
 
 ## path 1
 * cumprimentar
