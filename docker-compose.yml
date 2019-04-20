@@ -71,7 +71,25 @@ services:
     volumes:
       - ./bot/actions:/bot/actions
       - ./bot/Makefile:/bot/Makefile
-    command: "make run-actions"
+    command: sh -c "make run-actions"
+
+  # ============================ Telegram Bot =================================
+  telegram_bot:
+      build:
+        context: .
+        dockerfile: ./docker/bot.Dockerfile
+      environment:
+        - TELEGRAM_BOT_USERNAME=lappisbot
+        - TELEGRAM_TOKEN=token
+        - TELEGRAM_WEBHOOK=your_webhook_server/webhooks/telegram/webhook
+      ports:
+        - 5001:5001
+      depends_on:
+        - actions
+      volumes:
+        - ./bot:/bot
+        - ./scripts:/scripts
+      command: sh -c "make run-telegram"
 
   # =============================== Notebooks =================================
   notebooks:
