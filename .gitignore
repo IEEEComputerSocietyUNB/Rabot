@@ -110,3 +110,5 @@ venv.bak/
 bot/models
 notebooks/
 bot/credentials.yml
+.vscode/
+.idea/
