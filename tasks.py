@@ -5,6 +5,7 @@ from invoke import task
 def travis(c):
     """ Runs all tests on Travis CI """
     style(c)
+    # c.run('coverage run arquivo.py test -v')
     # lint(c)
 
 
