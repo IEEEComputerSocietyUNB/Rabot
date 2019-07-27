@@ -1,0 +1,30 @@
+[
+	{
+		"question": "Como tem estado o seu humor?"
+		"answer": ["Normal, sem elevações marcantes","Possivelmente elevado","Claramente elevado","Bastante elevado ou inapropriado ao que penso","Eufórico"]
+	},
+	{
+		"question": "Sente-se inquieto ou agitado?"
+		"answer": ["Sinto-me com a energia ou atividade motora normal","Tenho sentido com mais energia ou atividade motora","Tenho me sentido animado","Tenho me sentido hiperativo ou inquieto","Tenho me sentido constantemente hiperativo"]
+	},
+	{
+		"question": "Você tem pensado muito em sexo?"
+		"answer": ["Normal, sem elevações marcantes","Possivelmente elevado","Claramente elevado","Bastante elevado e penso bastante nisso","Penso constantemente sobre sexo"]
+	},
+	{
+		"question": "Ultimamente, você tem sentido dificuldade para dormir?"
+		"answer": ["Não tenho sentido dificuldades para dormir","Tenho dormido menos que o normal (cerca de 1 hora a menos)","Tenho dormido menos que o normal (mais de 1 hora a menos)","Tenho sentido menos necessidade de dormir","Não sinto necessidade de dormir"]
+	},
+	{
+		"question": "Nos últimos dias você está impaciente ou irritável com as outras pessoas?"
+		"answer": ["Normal, sem elevações marcantes","Tenho me sentido mais irritado","Tenho me sentido Irritável em alguns momentos","Tenho me sentido Irritável a maior parte do tempo","Sinto me hostil"]
+	},
+	{
+		"question": "Ultimamente, você está mais falante que o normal?"
+		"answer": ["Normal, sem elevações marcantes","Percebo-me mais falante do que o habitual","Percebo um aumento da velocidade ou quantidade de minhas falas em alguns momentos","Percebo um aumento da velocidade ou quantidade de minhas falas em vários momentos","Sinto que me minha fala é constantemente ininterruptível"]
+	},
+	{
+		"question": "Você sente que tem alguma coisa incomum acontecendo no seu corpo ou cabeça?"
+		"answer": ["Não","Tenho tido novos interesses, compatíveis com meu contexto","Tenho tidos novos interesses, incompatíveis com meu contexto","Tenho tido várias ideias e projetos especiais excelentes","Tenho tido ideais que certamente mudariam o mundo"]
+	}
+]
