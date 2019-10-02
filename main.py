@@ -3,7 +3,7 @@ from IPython.display import clear_output, HTML, display
 from rasa_core.agent import Agent
 import time
 
-messages = ["Hi! you can chat in this window. Type 'stop' to end the conversation."]
+messages = ["Olá! Você pode conversar comigo nesta janela. Digite 'stop' para terminar a conversa."]
 agent = Agent.load('models/dialogue')
 
 def chatlogs_html(messages):
