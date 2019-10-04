@@ -1,1 +1,6 @@
+bandit
+black
+flake8
+jupyter
+rasa==1.3.3
 rasa_core
