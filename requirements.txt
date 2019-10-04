@@ -1,3 +1,6 @@
-rasa_core
 bandit
+black
 flake8
+jupyter
+rasa
+rasa_core
