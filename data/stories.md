@@ -29,3 +29,9 @@
 ## bot challenge
 * bot_challenge
   - utter_iamabot
+
+## hello goodbye path
+* greet
+  - utter_greet
+* goodbye
+  - utter_ask_why_leaving
