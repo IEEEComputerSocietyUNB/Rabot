@@ -27,13 +27,15 @@ pip install -r bot.requirements.txt
 
 Train the bot
 
-`docker-compose run -d --rm bot make train`
+`rasa train`
 
 Run the bot on console
 
-`docker-compose run --rm bot run-console`
+`rasa shell`
 
-## Setting up environment for development
+## How to contribute
+
+If you don't know [RASA](https://rasa.com/docs/), start with their documentation. After that, you can add dialogues and improvements via Pull Request. Make sure that your Pull Requests are simple and have a clear purpose.
 
 ## Timeline
 
