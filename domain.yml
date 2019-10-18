@@ -6,7 +6,8 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-  - insult: {triggers: utter_respond_insult}
+  - insult:
+      {triggers: utter_respond_insult}
 
 actions:
   - utter_greet
