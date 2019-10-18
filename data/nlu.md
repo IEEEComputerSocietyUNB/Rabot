@@ -59,3 +59,32 @@
 - vai se fuder
 - tomar no cu
 - vai pra puta que pariu
+
+## intent:screening
+- yes
+- indeed
+- of course
+- that sounds good
+- correct
+
+## intent:chatting
+- no
+- never
+- I don't think so
+- don't like that
+- no way
+- not really
+
+## intent:piada
+- tell me a joke
+- I would love to hear a joke
+- make me laugh
+- tell me something funny
+- I wanna have a laugh
+
+## intent:emergencia
+- help me
+- I am not feeling well
+- I feel really bad
+- I am thinking of dying
+- I wanna die
