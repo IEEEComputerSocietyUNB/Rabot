@@ -54,3 +54,8 @@
 - você é humano?
 - eu estou falando com um bot?
 - eu estou falando com um humano?
+
+## intent:insult
+- vai se fuder
+- tomar no cu
+- vai pra puta que pariu

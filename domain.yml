@@ -6,14 +6,18 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - insult:
+      {triggers: utter_respond_insult}
 
 actions:
-- utter_greet
-- utter_cheer_up
-- utter_did_that_help
-- utter_happy
-- utter_goodbye
-- utter_iamabot
+  - utter_greet
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  - utter_goodbye
+  - utter_iamabot
+  - utter_ask_why_leaving
+  - utter_respond_insult
 
 templates:
   utter_greet:
@@ -34,3 +38,9 @@ templates:
 
   utter_iamabot:
   - text: "Eu sou o Rabot, feito com <3 e Rasa."
+
+  utter_ask_why_leaving:
+  - text: "Já? Nem conversamos ainda... Vem bater um papo comigo!"
+
+  utter_respond_insult:
+  - text: "Essa não é uma coisa legal de se dizer :("
