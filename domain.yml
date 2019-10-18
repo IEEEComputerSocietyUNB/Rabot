@@ -1,6 +1,10 @@
 intents:
   - greet
   - goodbye
+  - screening
+  - chatting
+  - piada
+  - emergencia
   - mood_affirm
   - mood_deny
   - mood_great
@@ -10,6 +14,16 @@ intents:
       {triggers: utter_respond_insult}
 
 actions:
+  - utter_introduction
+  - utter_full
+  - utter_sociodem
+  - utter_sociodemsim
+  - utter_sociodemnao
+  - utter_method
+  - utter_screening
+  - utter_topic
+  - utter_emergencia
+  - utter_piada
   - utter_greet
   - utter_cheer_up
   - utter_did_that_help
@@ -20,8 +34,71 @@ actions:
   - utter_respond_insult
 
 templates:
+  ### Introducao do bot
+  utter_introduction:
+  - text: "Olá, meu nome é Rabot. A equipe da Computer Society IEEE, que conta com alunos de computação e parceria com alunos de psicologia, me criou com o propósito de identificar emoções a partir de conversas com estudantes universitários. Sou um robô, portanto não substituo o acompanhamento com um profissional de saúde mental. Deseja saber mais sobre mim?"
+    buttons:
+      - title: "Sim_Mais"
+        payload: "Sim"
+      - title: "Não_Mais"
+        payload: "Não"
+  # Sim leva para "utter_full", Nao leva para "utter_sociodem"
+
+  utter_full:
+  - text: "Meu nome Rabot, uma junção de Rá (Deus do Sol, da mitologia egípcia) com Robot (que traduzindo para o português significa robô). A equipe me desenvolveu na linguagem de programação Python e banco de dados SQLite, juntamente com a inteligência artificial implementada a partir da RASA."
+
+  utter_sociodem:
+  - text: "Agora que você sabe um pouco sobre mim, posso fazer umas perguntas para conhecer melhor seu contexto?"
+    buttons:
+      - title: "Sim_soc"
+        payload: "Sim"
+      - title: "Não_soc"
+        payload: "Não"
+  # Sim leva para "utter_sociodemsim", Nao leva para "utter_sociodemnao"
+
+  utter_sociodemsim:
+  # Aplicar o questionario sociodemografico
+  - text: "Agora que já sei um pouco mais sobre seu contexto, vamos falar sobre outras coisas."
+
+  utter_sociodemnao:
+  - text: "Tudo bem, podemos voltar nisso depois."
+
+  ### Selecionar triagem ou conversa
+  utter_method:
+  - text: "Eu posso conversar com você de duas formas diferentes. Posso fazer uma série de perguntas fechadas e tentar investigar o que você está passando ou posso deixar você me falar mais abertamente sobre algum assunto que você queira conversar. Como você gostaria de continuar?"
+    buttons:
+      - title: "Traigem"
+        payload: "Perguntas fechadas"
+      - title: "Chatt"
+        payload: "Conversar"
+
+  utter_screening:
+  - text: "Under development."
+  # Aplicar a triagem
+
+  utter_topic:
+  - text: "Me conte então sobre quais destes tópicos você gostaria de conversar."
+    buttons:
+      - title: "Visão de mundo"
+        payload: "Visão de mundo"
+      - title: "Relações pessoais"
+        payload: "Relações pessoais"
+      - title: "Vida profissional ou acadêmica"
+        payload: "Vida profissional ou acadêmica"
+      - title: "Atividades diárias"
+        payload: "Atividades diárias"
+      - title: "Saúde"
+        payload: "Saúde"
+
+  ### Comportamentos padrões
   utter_greet:
-  - text: "Hey! Tudo bom?"
+  - text: "Olá! Como vão as coisas hoje?"
+
+  utter_emergencia:
+    - text: "Esses são alguns números que você pode ligar em caso de emergências:
+             - Centro de Valorização da Vida: 188
+             - Ambulância: 192
+             - Bombeiros: 193"
 
   utter_cheer_up:
   - text: "Algo para te animar hoje:"
@@ -34,7 +111,7 @@ templates:
   - text: "Ótimo!"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "Até logo e tenha um ótimo dia."
 
   utter_iamabot:
   - text: "Eu sou o Rabot, feito com <3 e Rasa."
@@ -44,3 +121,6 @@ templates:
 
   utter_respond_insult:
   - text: "Essa não é uma coisa legal de se dizer :("
+
+  utter_piada:
+    - text: "Por que os robôs não sentem medo? Porque eles têm nervos de aço 😢"
