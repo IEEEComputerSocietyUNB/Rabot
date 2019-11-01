@@ -1,0 +1,8 @@
+Frases importantes mas que não sabemos como categorizar ainda.
+Para ser implementado depois.
+
+## intent:pause
+- fica para a próxima
+
+## intent:??
+- como você sabe disso?

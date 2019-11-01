@@ -4,13 +4,26 @@
 - hi
 - bom dia
 - boa tarde
-- hey there
+- boa noite
+- e aí
 - olá
+- eai
+- oie
+- ei
+- ow
 
 ## intent:goodbye
 - bye
 - tchau!
 - até mais!
+- adeus
+- falou
+- até logo
+- até a próxima
+- até amanhã
+- até mais tarde
+- vou embora
+- é melhor a gente parar por aqui
 
 ## intent:affirm
 - sim
@@ -18,6 +31,10 @@
 - com certeza
 - perfeito
 - correto
+- é isso aí
+- é verdade
+- certo
+
 
 ## intent:deny
 - não
@@ -25,12 +42,12 @@
 - acho que não
 - nope
 - de jeito nenhum
-- not really
+- não exatamente
 
 ## intent:mood_great
-- perfecto
+- perfeito
 - que bom!!
-- great
+- muito bem
 - que maravilhoso!
 - que delícia
 - estou me sentindo muito bem
@@ -48,6 +65,8 @@
 - nada bem
 - extremamente sad
 - so sad
+- to meio zoado
+-
 
 ## intent:bot_challenge
 - você é um bot?
@@ -76,15 +95,22 @@
 - not really
 
 ## intent:piada
-- tell me a joke
-- I would love to hear a joke
-- make me laugh
-- tell me something funny
-- I wanna have a laugh
+- conte-me uma piada
+- adoraria ouvir uma piada
+- faça-me rir
+- conte-me algo engraçado
+- quero dar uma risada
+- fale-me uma piada
 
 ## intent:emergencia
-- help me
-- I am not feeling well
-- I feel really bad
-- I am thinking of dying
-- I wanna die
+- me ajuda
+- socorro
+- preciso de ajuda
+- não estou me sentindo bem
+- estou passando mal
+- eu estou pensando em me matar
+- não consigo mais suportar a vida
+- não quero mais viver
+- queria não existir mais
+- queria sumir
+- eu quero morrer

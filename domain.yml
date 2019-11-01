@@ -4,7 +4,8 @@ intents:
   - screening
   - chatting
   - piada
-  - emergencia
+  - emergencia:
+      {triggers: utter_emergencia}
   - mood_affirm
   - mood_deny
   - mood_great
