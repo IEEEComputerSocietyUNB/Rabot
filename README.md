@@ -1,4 +1,4 @@
-# Rabot
+﻿# Rabot
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/c12b3cacf48f121f0a6a/maintainability)](https://codeclimate.com/github/ComputerSocietyUNB/Rabot/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/c12b3cacf48f121f0a6a/test_coverage)](https://codeclimate.com/github/ComputerSocietyUNB/Rabot/test_coverage)
 
@@ -19,10 +19,17 @@ cd {this repo}
 
 Create a virtual environment, activate it and install it's requirements
 
+Linux:
 ```
 python3 -m venv venv
 source venv/bin/activate
-pip install -r bot.requirements.txt
+pip install -r requirements.txt
+```
+Windows:
+```
+python -m venv venv
+.\venv\Scripts\activate
+pip install -r requirements.txt
 ```
 
 Train the bot
