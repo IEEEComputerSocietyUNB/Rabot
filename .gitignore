@@ -112,3 +112,4 @@ notebooks/
 bot/credentials.yml
 .vscode/
 .idea/
+credentials.yml
