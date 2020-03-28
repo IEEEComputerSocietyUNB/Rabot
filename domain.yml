@@ -1,5 +1,7 @@
 intents:
   - greet
+  - affirm
+  - deny
   - goodbye
   - screening
   - chatting
@@ -14,17 +16,12 @@ intents:
   - insult:
       {triggers: utter_respond_insult}
 
-entities:
-  - know_more_introduction
-
-slots:
-  know_more_introduction:
-    type: text
+forms:
+  - restaurant_form
 
 actions:
   - utter_introduction
-  - action_introduction_register
-  - utter_full
+  - utter_full_introduction
   - utter_sociodem
   - utter_sociodemsim
   - utter_sociodemnao
@@ -46,14 +43,9 @@ templates:
   ### Introducao do bot
   utter_introduction:
   - text: "Olá, meu nome é Rabot. A equipe da Computer Society IEEE, que conta com alunos de computação e parceria com alunos de psicologia, me criou com o propósito de identificar emoções a partir de conversas com estudantes universitários. Sou um robô, portanto não substituo o acompanhamento com um profissional de saúde mental. Deseja saber mais sobre mim?"
-    buttons:
-      - title: "Sim"
-        payload: "sim"
-      - title: "Não"
-        payload: "não"
   # Sim leva para "utter_full", Nao leva para "utter_sociodem"
 
-  utter_full:
+  utter_full_introduction:
   - text: "Meu nome Rabot, uma junção de Rá (Deus do Sol, da mitologia egípcia) com Robot (que traduzindo para o português significa robô). A equipe me desenvolveu na linguagem de programação Python e banco de dados SQLite, juntamente com a inteligência artificial implementada a partir da RASA."
 
   utter_sociodem:
@@ -76,7 +68,7 @@ templates:
   utter_method:
   - text: "Eu posso conversar com você de duas formas diferentes. Posso fazer uma série de perguntas fechadas e tentar investigar o que você está passando ou posso deixar você me falar mais abertamente sobre algum assunto que você queira conversar. Como você gostaria de continuar?"
     buttons:
-      - title: "Traigem"
+      - title: "Triagem"
         payload: "Perguntas fechadas"
       - title: "Chatt"
         payload: "Conversar"

@@ -14,20 +14,28 @@
  from rasa_core_sdk import Action
  from rasa_core_sdk.events import SlotSet
 
- class StoreIntroductionIntent(Action):
-     """Stores the bot use case in a slot"""
+def name(self) -> Text:
+    """Unique identifier of the form"""
 
-     def name(self):
-         return "store_introduction_intent"
+    return "full_introduction_form"
 
-     def run(self, dispatcher, tracker, domain):
+@staticmethod
+def required_slots(tracker: Tracker) -> List[Text]:
+    """A list of required slots that the form has to fill"""
 
-         # we grab the whole user utterance here as there are no real entities
-         # in the use case
-         message = tracker.latest_message.get('text')
+    return ["full_introduction"]
 
-         return [SlotSet('intent_message', message)]
+def submit(
+    self,
+    dispatcher: CollectingDispatcher,
+    tracker: Tracker,
+    domain: Dict[Text, Any],
+) -> List[Dict]:
+    """Define what the form has to do after all required slots are filled"""
 
+    # utter submit template
+    dispatcher.utter_message(template="utter_full_introduction")
+    return []
 
 #
 # class ActionHelloWorld(Action):

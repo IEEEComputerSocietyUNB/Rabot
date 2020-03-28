@@ -1,9 +1,23 @@
-## introduction
+## happy path
 * greet
   - utter_introduction
+* affirm
+  - utter_full_introduction
+
+## happy path
+* greet
+  - utter_introduction
+* deny
   - utter_sociodem
 
+
+
 <!---
+## introduction
+#* greet
+#  - utter_introduction
+#  - utter_sociodem
+
 ## happy path
 * greet
   - utter_greet
