@@ -25,6 +25,7 @@ slots:
     type: text
 
 actions:
+  - action_introduction
   - utter_introduction
   - utter_full_introduction
   - utter_sociodem
