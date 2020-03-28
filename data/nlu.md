@@ -13,6 +13,16 @@
 - ei
 - ow
 
+## intent:inform
+- meu nome é [Gabriela](username)
+- [Felipe](username)
+- [Víthor](username)
+- eu me chamo [Alexandre](username)
+- me chamo [Carol]
+- [Gabriela](username)
+- pode me chamar de [Lucas](username)
+
+
 ## intent:goodbye
 - bye
 - tchau!

@@ -3,6 +3,7 @@ intents:
   - affirm
   - deny
   - goodbye
+  - inform
   - screening
   - chatting
   - piada
@@ -16,10 +17,17 @@ intents:
   - insult:
       {triggers: utter_respond_insult}
 
-forms:
-  - restaurant_form
+entities:
+  - username
+
+slots:
+  username:
+    type: text
+    auto_fill: false
 
 actions:
+  - utter_ask_username
+  - utter_greet_username
   - utter_introduction
   - utter_full_introduction
   - utter_sociodem
@@ -41,12 +49,18 @@ actions:
 
 templates:
   ### Introducao do bot
+  utter_ask_username:
+    - text: "Qual o seu nome?"
+
+  utter_greet_username:
+    - text: "Muito prazer, {username}."
+
   utter_introduction:
-  - text: "Olá, meu nome é Rabot. A equipe da Computer Society IEEE, que conta com alunos de computação e parceria com alunos de psicologia, me criou com o propósito de identificar emoções a partir de conversas com estudantes universitários. Sou um robô, portanto não substituo o acompanhamento com um profissional de saúde mental. Deseja saber mais sobre mim?"
+    - text: "Meu nome é Rabot. A equipe da Computer Society IEEE, que conta com alunos de computação e parceria com alunos de psicologia, me criou com o propósito de identificar emoções a partir de conversas com estudantes universitários. Sou um robô, portanto não substituo o acompanhamento com um profissional de saúde mental. Deseja saber mais sobre mim?"
   # Sim leva para "utter_full", Nao leva para "utter_sociodem"
 
   utter_full_introduction:
-  - text: "Meu nome Rabot, uma junção de Rá (Deus do Sol, da mitologia egípcia) com Robot (que traduzindo para o português significa robô). A equipe me desenvolveu na linguagem de programação Python e banco de dados SQLite, juntamente com a inteligência artificial implementada a partir da RASA."
+    - text: "Meu nome Rabot, uma junção de Rá (Deus do Sol, da mitologia egípcia) com Robot (que traduzindo para o português significa robô). A equipe me desenvolveu na linguagem de programação Python e banco de dados SQLite, juntamente com a inteligência artificial implementada a partir da RASA."
 
   utter_sociodem:
   - text: "Agora que você sabe um pouco sobre mim, posso fazer umas perguntas para conhecer melhor seu contexto?"
@@ -93,7 +107,7 @@ templates:
 
   ### Comportamentos padrões
   utter_greet:
-  - text: "Olá! Como vão as coisas hoje?"
+  - text: "Olá, eu sou o Rabot!"
 
   utter_emergencia:
     - text: "Esses são alguns números que você pode ligar em caso de emergências:
@@ -125,3 +139,6 @@ templates:
 
   utter_piada:
     - text: "Por que os robôs não sentem medo? Porque eles têm nervos de aço 😢"
+
+forms:
+  - username_form

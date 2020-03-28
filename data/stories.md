@@ -1,16 +1,13 @@
 ## happy path
 * greet
+  - utter_greet
+  - username_form
+  - form{"name": "username_form"}
+  - slot{"requested_slot": "username"}
+  - form{"name": null}
   - utter_introduction
 * affirm
   - utter_full_introduction
-
-## happy path
-* greet
-  - utter_introduction
-* deny
-  - utter_sociodem
-
-
 
 <!---
 ## introduction
