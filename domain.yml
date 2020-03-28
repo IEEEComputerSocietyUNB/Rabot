@@ -14,8 +14,16 @@ intents:
   - insult:
       {triggers: utter_respond_insult}
 
+entities:
+  - know_more_introduction
+
+slots:
+  know_more_introduction:
+    type: text
+
 actions:
   - utter_introduction
+  - action_introduction_register
   - utter_full
   - utter_sociodem
   - utter_sociodemsim
@@ -39,10 +47,10 @@ templates:
   utter_introduction:
   - text: "Olá, meu nome é Rabot. A equipe da Computer Society IEEE, que conta com alunos de computação e parceria com alunos de psicologia, me criou com o propósito de identificar emoções a partir de conversas com estudantes universitários. Sou um robô, portanto não substituo o acompanhamento com um profissional de saúde mental. Deseja saber mais sobre mim?"
     buttons:
-      - title: "Sim_Mais"
-        payload: "Sim"
-      - title: "Não_Mais"
-        payload: "Não"
+      - title: "Sim"
+        payload: "sim"
+      - title: "Não"
+        payload: "não"
   # Sim leva para "utter_full", Nao leva para "utter_sociodem"
 
   utter_full:

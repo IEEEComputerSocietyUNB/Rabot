@@ -7,11 +7,28 @@
 
 # This is a simple example for a custom action which utters "Hello World!"
 
-# from typing import Any, Text, Dict, List
-#
-# from rasa_sdk import Action, Tracker
-# from rasa_sdk.executor import CollectingDispatcher
-#
+ from typing import Any, Text, Dict, List
+
+ from rasa_sdk import Action, Tracker
+ from rasa_sdk.executor import CollectingDispatcher
+ from rasa_core_sdk import Action
+ from rasa_core_sdk.events import SlotSet
+
+ class StoreIntroductionIntent(Action):
+     """Stores the bot use case in a slot"""
+
+     def name(self):
+         return "store_introduction_intent"
+
+     def run(self, dispatcher, tracker, domain):
+
+         # we grab the whole user utterance here as there are no real entities
+         # in the use case
+         message = tracker.latest_message.get('text')
+
+         return [SlotSet('intent_message', message)]
+
+
 #
 # class ActionHelloWorld(Action):
 #

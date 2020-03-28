@@ -1,7 +1,8 @@
 ## intent:greet
-- hey
+- ei
 - oi
-- hi
+- hey
+- ola
 - bom dia
 - boa tarde
 - boa noite

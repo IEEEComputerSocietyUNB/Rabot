@@ -1,3 +1,9 @@
+## introduction
+* greet
+  - utter_introduction
+  - utter_sociodem
+
+<!---
 ## happy path
 * greet
   - utter_greet
@@ -35,3 +41,5 @@
   - utter_greet
 * goodbye
   - utter_ask_why_leaving
+
+  -->
