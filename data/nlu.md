@@ -15,8 +15,6 @@
 
 ## intent:inform
 - meu nome é [Gabriela](username)
-- [Felipe](username)
-- [Víthor](username)
 - eu me chamo [Alexandre](username)
 - me chamo [Carol]
 - [Gabriela](username)
@@ -88,7 +86,7 @@
 - vai se fuder
 - tomar no cu
 - vai pra puta que pariu
-
+<!---
 ## intent:screening
 - yes
 - indeed
@@ -121,3 +119,4 @@
 - queria não existir mais
 - queria sumir
 - eu quero morrer
+  -->

@@ -4,9 +4,28 @@
   - username_form
   - form{"name": "username_form"}
   - slot{"requested_slot": "username"}
-  - form{"name": null}
   - utter_introduction
 * affirm
+  - utter_full_introduction
+  - utter_check_humor
+* mood_great
+  - utter_happy
+
+## happy path
+* greet
+  - utter_greet
+  - username_form
+  - form{"name": "username_form"}
+  - slot{"requested_slot": "username"}
+  - form{"name": null}
+  - utter_introduction
+* deny
+  - utter_sociodemnao
+  - utter_check_humor
+* mood_unhappy
+  - utter_cheer_up
+
+
 
 <!---
 ## happy path 2

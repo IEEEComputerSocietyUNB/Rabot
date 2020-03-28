@@ -4,44 +4,44 @@ intents:
   - deny
   - goodbye
   - inform
-  - screening
-  - chatting
-  - piada
-  - emergencia:
-      {triggers: utter_emergencia}
-  - mood_affirm
-  - mood_deny
+#  - screening
+#  - chatting
+#  - piada
+#  - emergencia:
+#      {triggers: utter_emergencia}
+#  - mood_affirm
+#  - mood_deny
   - mood_great
   - mood_unhappy
-  - bot_challenge
-  - insult:
-      {triggers: utter_respond_insult}
+#  - bot_challenge
+#  - insult:
+#      {triggers: utter_respond_insult}
 
 entities:
   - username
 
 slots:
-  full_information:
-    type: text
-    initial_value: "False"
-  know_more:
-    type: text
-  sociodem_quest:
-    type: text
+#  full_information:
+#    type: text
+#    initial_value: "False"
+#  know_more:
+#    type: text
+#  sociodem_quest:
+#    type: text
   username:
     type: text
-    auto_fill: false
 
 actions:
   - utter_ask_username
   - utter_greet_username
-  - action_introduction
+#  - action_introduction
   - utter_introduction
   - utter_full_introduction
-  - utter_sociodem
-  - utter_sociodemsim
+  - utter_check_humor
+#  - utter_sociodem
+#  - utter_sociodemsim
   - utter_sociodemnao
-  - utter_method
+#  - utter_method
   #- utter_screening
   #- utter_topic
   #- utter_emergencia
@@ -64,24 +64,26 @@ responses:
     - text: "Muito prazer, {username}."
 
   utter_introduction:
-  - text: "Olá, meu nome é Rabot. A equipe da Computer Society IEEE, que conta com alunos de computação e parceria com alunos de psicologia, me criou com o propósito de identificar emoções a partir de conversas com estudantes universitários. Sou um robô, portanto não substituo o acompanhamento com um profissional de saúde mental. Deseja saber mais sobre mim?"
-    buttons:
-    - title: "Sim"
-      payload: '/choose{"know_more": "True"}'
-    - title: "Não"
-      payload: '/choose{"know_more": "False"}'
+  - text: "A equipe da Computer Society IEEE, que conta com alunos de computação e parceria com alunos de psicologia, me criou com o propósito de identificar emoções a partir de conversas com estudantes universitários. Sou um robô, portanto não substituo o acompanhamento com um profissional de saúde mental. Deseja saber mais sobre mim?"
+#    buttons:
+#    - title: "Sim"
+#    - title: "Não"
+#      payload: '/choose{"know_more": "False"}'
   # Sim leva para "utter_full", Nao leva para "utter_sociodem"
 
   utter_full_introduction:
     - text: "Meu nome Rabot, uma junção de Rá (Deus do Sol, da mitologia egípcia) com Robot (que traduzindo para o português significa robô). A equipe me desenvolveu na linguagem de programação Python e banco de dados SQLite, juntamente com a inteligência artificial implementada a partir da RASA."
 
-  utter_sociodem:
-  - text: "Agora que você sabe um pouco sobre mim, posso fazer umas perguntas para conhecer melhor seu contexto?"
-    buttons:
-    - title: "Sim"
-      payload: '/choose{"sociodem_quest": "True"}'
-    - title: "Não"
-      payload: '/choose{"sociodem_quest": "False"}'
+  utter_check_humor:
+  - text: Como você está se sentindo hoje?
+
+#  utter_sociodem:
+#  - text: "Agora que você sabe um pouco sobre mim, posso fazer umas perguntas para conhecer melhor seu contexto?"
+#    buttons:
+#    - title: "Sim"
+#      payload: '/choose{"sociodem_quest": "True"}'
+#    - title: "Não"
+#      payload: '/choose{"sociodem_quest": "False"}'
   # Sim leva para "utter_sociodemsim", Nao leva para "utter_sociodemnao"
 
   utter_sociodemsim:
@@ -92,41 +94,40 @@ responses:
   - text: "Tudo bem, podemos voltar nisso depois."
 
   ### Selecionar triagem ou conversa
-  utter_method:
-  - text: "Eu posso conversar com você de duas formas diferentes. Posso fazer uma série de perguntas fechadas e tentar investigar o que você está passando ou posso deixar você me falar mais abertamente sobre algum assunto que você queira conversar. Como você gostaria de continuar?"
-    buttons:
-      - title: "Triagem"
-        payload: "Perguntas fechadas"
-      - title: "Chat"
-        payload: "Conversar"
+#  utter_method:
+#  - text: "Eu posso conversar com você de duas formas diferentes. Posso fazer uma série de perguntas fechadas e tentar investigar o que você está passando ou posso deixar você me falar mais abertamente sobre algum assunto que você queira conversar. Como você gostaria de continuar?"
+#    buttons:
+#      - title: "Triagem"
+#        payload: "Perguntas fechadas"
+#      - title: "Chat"
+#        payload: "Conversar"
 
-  utter_screening:
-  - text: "Under development."
+#  utter_screening:
+#  - text: "Under development."
   # Aplicar a triagem
 
-  utter_topic:
-  - text: "Me conte então sobre quais destes tópicos você gostaria de conversar."
-    buttons:
-      - title: "Visão de mundo"
-        payload: "Visão de mundo"
-      - title: "Relações pessoais"
-        payload: "Relações pessoais"
-      - title: "Vida profissional ou acadêmica"
-        payload: "Vida profissional ou acadêmica"
-      - title: "Atividades diárias"
-        payload: "Atividades diárias"
-      - title: "Saúde"
-        payload: "Saúde"
+#  utter_topic:
+#  - text: "Me conte então sobre quais destes tópicos você gostaria de conversar."
+#    buttons:
+#      - title: "Visão de mundo"
+#        payload: "Visão de mundo"
+#      - title: "Relações pessoais"
+#        payload: "Relações pessoais"
+#      - title: "Vida profissional ou acadêmica"
+#      - title: "Atividades diárias"
+#        payload: "Atividades diárias"
+#      - title: "Saúde"
+#        payload: "Saúde"
 
   ### Comportamentos padrões
   utter_greet:
   - text: "Olá, eu sou o Rabot!"
 
-  utter_emergencia:
-    - text: "Esses são alguns números que você pode ligar em caso de emergências:
-             - Centro de Valorização da Vida: 188
-             - Ambulância: 192
-             - Bombeiros: 193"
+#  utter_emergencia:
+#    - text: "Esses são alguns números que você pode ligar em caso de emergências:
+#             - Centro de Valorização da Vida: 188
+#             - Ambulância: 192
+#             - Bombeiros: 193"
 
   utter_cheer_up:
   - text: "Algo para te animar hoje:"
@@ -141,17 +142,17 @@ responses:
   utter_goodbye:
   - text: "Até logo e tenha um ótimo dia."
 
-  utter_iamabot:
-  - text: "Eu sou o Rabot, feito com <3 e Rasa."
+#  utter_iamabot:
+#  - text: "Eu sou o Rabot, feito com <3 e Rasa."
 
-  utter_ask_why_leaving:
-  - text: "Já? Nem conversamos ainda... Vem bater um papo comigo!"
+#  utter_ask_why_leaving:
+#  - text: "Já? Nem conversamos ainda... Vem bater um papo comigo!"
 
-  utter_respond_insult:
-  - text: "Essa não é uma coisa legal de se dizer :("
+#  utter_respond_insult:
+#  - text: "Essa não é uma coisa legal de se dizer :("
 
-  utter_piada:
-    - text: "Por que os robôs não sentem medo? Porque eles têm nervos de aço 😢"
+#  utter_piada:
+#    - text: "Por que os robôs não sentem medo? Porque eles têm nervos de aço 😢"
 
 forms:
   - username_form
