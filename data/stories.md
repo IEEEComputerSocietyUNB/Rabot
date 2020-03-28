@@ -7,13 +7,22 @@
   - form{"name": null}
   - utter_introduction
 * affirm
+
+## happy path 2
+* greet{"full_information": "False"}
+  - action_introduction
   - utter_full_introduction
+  - utter_sociodem
+  - utter_sociodemsim
+  - utter_sociodemnao
+  - slot{"full_information": "True"}
+  - utter_method
 
 <!---
 ## introduction
-#* greet
-#  - utter_introduction
-#  - utter_sociodem
+* greet
+  - utter_introduction
+  - utter_sociodem
 
 ## happy path
 * greet

@@ -46,7 +46,6 @@
 - é verdade
 - certo
 
-
 ## intent:deny
 - não
 - nunca
@@ -98,12 +97,9 @@
 - correct
 
 ## intent:chatting
-- no
-- never
-- I don't think so
-- don't like that
-- no way
-- not really
+- vamos conversar
+- quero conversar
+- prefiro conversar
 
 ## intent:piada
 - conte-me uma piada

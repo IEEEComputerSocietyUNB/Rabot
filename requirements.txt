@@ -2,5 +2,7 @@ bandit
 black
 flake8
 jupyter
+spacy
+joblib
 rasa
 rasa_core

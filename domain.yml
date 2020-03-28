@@ -20,34 +20,44 @@ intents:
 entities:
   - username
 
+actions:
+  - utter_ask_username
+  - utter_greet_username
+
 slots:
+  full_information:
+    type: text
+    initial_value: "False"
+  know_more:
+    type: text
+  sociodem_quest:
+    type: text
   username:
     type: text
     auto_fill: false
 
 actions:
-  - utter_ask_username
-  - utter_greet_username
+  - action_introduction
   - utter_introduction
   - utter_full_introduction
   - utter_sociodem
   - utter_sociodemsim
   - utter_sociodemnao
   - utter_method
-  - utter_screening
-  - utter_topic
-  - utter_emergencia
-  - utter_piada
-  - utter_greet
-  - utter_cheer_up
-  - utter_did_that_help
-  - utter_happy
-  - utter_goodbye
-  - utter_iamabot
-  - utter_ask_why_leaving
-  - utter_respond_insult
+  #- utter_screening
+  #- utter_topic
+  #- utter_emergencia
+  #- utter_piada
+  #- utter_greet
+  #- utter_cheer_up
+  #- utter_did_that_help
+  #- utter_happy
+  #- utter_goodbye
+  #- utter_iamabot
+  #- utter_ask_why_leaving
+  #- utter_respond_insult
 
-templates:
+responses:
   ### Introducao do bot
   utter_ask_username:
     - text: "Qual o seu nome?"
@@ -56,7 +66,12 @@ templates:
     - text: "Muito prazer, {username}."
 
   utter_introduction:
-    - text: "Meu nome é Rabot. A equipe da Computer Society IEEE, que conta com alunos de computação e parceria com alunos de psicologia, me criou com o propósito de identificar emoções a partir de conversas com estudantes universitários. Sou um robô, portanto não substituo o acompanhamento com um profissional de saúde mental. Deseja saber mais sobre mim?"
+  - text: "Olá, meu nome é Rabot. A equipe da Computer Society IEEE, que conta com alunos de computação e parceria com alunos de psicologia, me criou com o propósito de identificar emoções a partir de conversas com estudantes universitários. Sou um robô, portanto não substituo o acompanhamento com um profissional de saúde mental. Deseja saber mais sobre mim?"
+    buttons:
+    - title: "Sim"
+      payload: '/choose{"know_more": "True"}'
+    - title: "Não"
+      payload: '/choose{"know_more": "False"}'
   # Sim leva para "utter_full", Nao leva para "utter_sociodem"
 
   utter_full_introduction:
@@ -65,10 +80,10 @@ templates:
   utter_sociodem:
   - text: "Agora que você sabe um pouco sobre mim, posso fazer umas perguntas para conhecer melhor seu contexto?"
     buttons:
-      - title: "Sim_soc"
-        payload: "Sim"
-      - title: "Não_soc"
-        payload: "Não"
+    - title: "Sim"
+      payload: '/choose{"sociodem_quest": "True"}'
+    - title: "Não"
+      payload: '/choose{"sociodem_quest": "False"}'
   # Sim leva para "utter_sociodemsim", Nao leva para "utter_sociodemnao"
 
   utter_sociodemsim:
@@ -84,7 +99,7 @@ templates:
     buttons:
       - title: "Triagem"
         payload: "Perguntas fechadas"
-      - title: "Chatt"
+      - title: "Chat"
         payload: "Conversar"
 
   utter_screening:
