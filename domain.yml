@@ -20,10 +20,6 @@ intents:
 entities:
   - username
 
-actions:
-  - utter_ask_username
-  - utter_greet_username
-
 slots:
   full_information:
     type: text
@@ -37,6 +33,8 @@ slots:
     auto_fill: false
 
 actions:
+  - utter_ask_username
+  - utter_greet_username
   - action_introduction
   - utter_introduction
   - utter_full_introduction

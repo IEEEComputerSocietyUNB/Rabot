@@ -8,6 +8,7 @@
   - utter_introduction
 * affirm
 
+<!---
 ## happy path 2
 * greet{"full_information": "False"}
   - action_introduction
@@ -18,7 +19,6 @@
   - slot{"full_information": "True"}
   - utter_method
 
-<!---
 ## introduction
 * greet
   - utter_introduction

@@ -2,24 +2,24 @@
 # https://rasa.com/docs/rasa/core/actions/#custom-actions/
 
 from typing import Dict, Text, Any, List, Union, Optional
-from rasa_sdk.actions import Action
+from rasa_sdk import Action
 from rasa_sdk.events import SlotSet
 from rasa_sdk import Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
 
-class ActionIntroduction(Action):
-
-    def name(self) -> Text:
-        return "action_introduction"
-
-    def submit(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        dispatcher.utter_message(responses="utter_introduction")
-
-        return []
+#class ActionIntroduction(Action):
+#
+#    def name(self) -> Text:
+#        return "action_introduction"
+#
+#    def submit(self, dispatcher: CollectingDispatcher,
+#            tracker: Tracker,
+#            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#
+#        dispatcher.utter_message(responses="utter_introduction")
+#
+#        return []
 
 
 class UsernameForm(FormAction):
