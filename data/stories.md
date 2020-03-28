@@ -1,22 +1,24 @@
 ## happy path
-* greet
+* greet{"full_information": "False"}
   - utter_introduction
-* affirm
-  - utter_full_introduction
+  - utter_full_introduction{"know_more": "True"}
+  - utter_sociodem
+  - utter_sociodemsim{"sociodem_quest": "True"}
+  - utter_sociodemnao{"sociodem_quest": "False"}
+  - slot{"full_information": "True"}
+  - utter_method
 
+<!---
 ## happy path
 * greet
   - utter_introduction
 * deny
   - utter_sociodem
 
-
-
-<!---
 ## introduction
-#* greet
-#  - utter_introduction
-#  - utter_sociodem
+* greet
+  - utter_introduction
+  - utter_sociodem
 
 ## happy path
 * greet

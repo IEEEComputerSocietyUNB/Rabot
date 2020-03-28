@@ -2,22 +2,27 @@ intents:
   - greet
   - affirm
   - deny
-  - goodbye
-  - screening
-  - chatting
-  - piada
-  - emergencia:
-      {triggers: utter_emergencia}
-  - mood_affirm
-  - mood_deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - insult:
-      {triggers: utter_respond_insult}
+  #- goodbye
+  #- screening
+  #- chatting
+  #- piada
+  #- emergencia:
+  #  {triggers: utter_emergencia}
+  #- mood_deny
+  #- mood_great
+  #- mood_unhappy
+  #- bot_challenge
+  #- insult:
+  #    {triggers: utter_respond_insult}
 
-forms:
-  - restaurant_form
+slots:
+  full_information:
+    type: text
+    initial_value: "False"
+  know_more:
+    type: text
+  sociodem_quest:
+    type: text
 
 actions:
   - utter_introduction
@@ -26,23 +31,28 @@ actions:
   - utter_sociodemsim
   - utter_sociodemnao
   - utter_method
-  - utter_screening
-  - utter_topic
-  - utter_emergencia
-  - utter_piada
-  - utter_greet
-  - utter_cheer_up
-  - utter_did_that_help
-  - utter_happy
-  - utter_goodbye
-  - utter_iamabot
-  - utter_ask_why_leaving
-  - utter_respond_insult
+  #- utter_screening
+  #- utter_topic
+  #- utter_emergencia
+  #- utter_piada
+  #- utter_greet
+  #- utter_cheer_up
+  #- utter_did_that_help
+  #- utter_happy
+  #- utter_goodbye
+  #- utter_iamabot
+  #- utter_ask_why_leaving
+  #- utter_respond_insult
 
-templates:
+responses:
   ### Introducao do bot
   utter_introduction:
   - text: "Olá, meu nome é Rabot. A equipe da Computer Society IEEE, que conta com alunos de computação e parceria com alunos de psicologia, me criou com o propósito de identificar emoções a partir de conversas com estudantes universitários. Sou um robô, portanto não substituo o acompanhamento com um profissional de saúde mental. Deseja saber mais sobre mim?"
+    buttons:
+    - title: "Sim"
+      payload: '/choose{"know_more": "True"}'
+    - title: "Não"
+      payload: '/choose{"know_more": "False"}'
   # Sim leva para "utter_full", Nao leva para "utter_sociodem"
 
   utter_full_introduction:
@@ -51,10 +61,10 @@ templates:
   utter_sociodem:
   - text: "Agora que você sabe um pouco sobre mim, posso fazer umas perguntas para conhecer melhor seu contexto?"
     buttons:
-      - title: "Sim_soc"
-        payload: "Sim"
-      - title: "Não_soc"
-        payload: "Não"
+    - title: "Sim"
+      payload: '/choose{"sociodem_quest": "True"}'
+    - title: "Não"
+      payload: '/choose{"sociodem_quest": "False"}'
   # Sim leva para "utter_sociodemsim", Nao leva para "utter_sociodemnao"
 
   utter_sociodemsim:
@@ -70,7 +80,7 @@ templates:
     buttons:
       - title: "Triagem"
         payload: "Perguntas fechadas"
-      - title: "Chatt"
+      - title: "Chat"
         payload: "Conversar"
 
   utter_screening:
