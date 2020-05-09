@@ -1,26 +1,31 @@
-## happy path
+## form path
 * greet
   - utter_greet
+  - username_form
+  - form{"name": "name_form"}
+  - slot{"requested_slot": "name"}
+  - utter_introduction
+* affirm
+  - utter_full_introduction
+  - utter_check_humor
 * mood_great
   - utter_happy
 
-## sad path 1
-* greet
-  - utter_greet
-* mood_unhappy
-  - utter_cheer_up
-  - utter_did_that_help
-* affirm
-  - utter_happy
 
-## sad path 2
+## greet + get name + check mood
 * greet
   - utter_greet
-* mood_unhappy
-  - utter_cheer_up
-  - utter_did_that_help
-* deny
-  - utter_goodbye
+  - utter_ask_name
+* inform_name{"name": "name"}
+  - utter_name
+  - utter_ask_mood
+* inform_mood{"mood": "mood"}
+  - slot{"mood": "mood"}
+  - utter_ask_triage
+* inform_triage{"triage": "triage"}
+  - action_debug_bot
+  - slot{"triage": "triage"}
+  - utter_triage_choice
 
 ## say goodbye
 * goodbye
@@ -29,9 +34,3 @@
 ## bot challenge
 * bot_challenge
   - utter_iamabot
-
-## hello goodbye path
-* greet
-  - utter_greet
-* goodbye
-  - utter_ask_why_leaving

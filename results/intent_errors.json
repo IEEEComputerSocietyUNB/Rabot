@@ -1,0 +1,82 @@
+[
+  {
+    "text": "Sitka",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.36712774634361267
+    }
+  },
+  {
+    "text": "Juneau",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.3763466775417328
+    }
+  },
+  {
+    "text": "Chicago",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.4859408438205719
+    }
+  },
+  {
+    "text": "Brasilia",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.2521086633205414
+    }
+  },
+  {
+    "text": "Boston",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.38263723254203796
+    }
+  },
+  {
+    "text": "I need a hospital",
+    "intent": "search_provider",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.40478822588920593
+    }
+  },
+  {
+    "text": "find me a nearby hospital",
+    "intent": "search_provider",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.3639847934246063
+    }
+  },
+  {
+    "text": "show me home health agencies",
+    "intent": "search_provider",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.2821040451526642
+    }
+  },
+  {
+    "text": "hospital",
+    "intent": "search_provider",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.30523481965065
+    }
+  },
+  {
+    "text": "find me a nearby hospital in Brasilia",
+    "intent": "search_provider",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.46666860580444336
+    }
+  }
+]
