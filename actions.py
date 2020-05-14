@@ -7,11 +7,10 @@
 
 # This is a simple example for a custom action which utters "Hello World!"
 
-from typing import Any, Text, Dict, List
+from typing import Any, Text, Dict
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.events import SlotSet
 
 # class ActionFacilitySearch(Action):
 
@@ -28,12 +27,18 @@ from rasa_sdk.events import SlotSet
 
 #         return [SlotSet("address", address)]
 
+
 class ActionDebugBot(Action):
     def name(self) -> Text:
         return "action_debug_bot"
 
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]):
-            import ipdb; ipdb.set_trace()
-            dispatcher.utter_message(text="Debug away, captain!")
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ):
+        import ipdb
+
+        ipdb.set_trace()
+        dispatcher.utter_message(text="Debug away, captain!")

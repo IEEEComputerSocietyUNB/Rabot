@@ -1,5 +1,3 @@
-import os
-
 from invoke import task
 
 # Parameterizing tasks with invoke
@@ -45,7 +43,6 @@ def stop(c):
     print("Rasa server stopped.")
 
 
-
 @task
 def dm(c):
     """
@@ -53,6 +50,7 @@ def dm(c):
     """
     c.run("rm -f models/*", pty=True)
     print("All model files removed.")
+
 
 @task
 def dt(c):
