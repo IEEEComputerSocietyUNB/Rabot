@@ -1,6 +1,5 @@
-bandit
-black
-flake8
-jupyter
-rasa
-rasa_core
+bandit==1.6.2
+black==19.10b0
+flake8==3.7.9
+invoke==1.4.1
+rasa==1.9.6

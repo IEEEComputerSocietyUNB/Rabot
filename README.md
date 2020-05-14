@@ -1,4 +1,4 @@
-﻿# Rabot
+# Rabot
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/c12b3cacf48f121f0a6a/maintainability)](https://codeclimate.com/github/ComputerSocietyUNB/Rabot/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/c12b3cacf48f121f0a6a/test_coverage)](https://codeclimate.com/github/ComputerSocietyUNB/Rabot/test_coverage)
 

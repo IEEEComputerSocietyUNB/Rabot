@@ -1,0 +1,128 @@
+[
+  {
+    "text": "Sitka",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "Sitka",
+        "entity": "location"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Juneau",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "Juneau",
+        "entity": "location"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Chicago",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "Chicago",
+        "entity": "location"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Brasilia",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "Brasilia",
+        "entity": "location"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Boston",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "Boston",
+        "entity": "location"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I need a hospital",
+    "entities": [
+      {
+        "start": 9,
+        "end": 17,
+        "value": "hospital",
+        "entity": "facility"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "find me a nearby hospital",
+    "entities": [
+      {
+        "start": 17,
+        "end": 25,
+        "value": "hospital",
+        "entity": "facility"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "show me home health agencies",
+    "entities": [
+      {
+        "start": 8,
+        "end": 28,
+        "value": "home health agencies",
+        "entity": "facility"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "hospital",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "hospital",
+        "entity": "facility"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "find me a nearby hospital in Brasilia",
+    "entities": [
+      {
+        "start": 17,
+        "end": 25,
+        "value": "hospital",
+        "entity": "facility"
+      },
+      {
+        "start": 29,
+        "end": 37,
+        "value": "Brasilia",
+        "entity": "location"
+      }
+    ],
+    "predicted_entities": []
+  }
+]
